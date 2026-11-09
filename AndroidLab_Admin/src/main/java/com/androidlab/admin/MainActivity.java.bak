@@ -1,0 +1,33 @@
+package com.androidlab.admin;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.view.Gravity;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.setGravity(Gravity.CENTER);
+        layout.setPadding(30, 30, 30, 30);
+
+        TextView title = new TextView(this);
+        title.setText("AndroidLab Admin");
+        title.setTextSize(26);
+
+        TextView status = new TextView(this);
+        status.setText("\nDevice Status: Disconnected\n\nWaiting for Client...");
+        status.setTextSize(18);
+
+        layout.addView(title);
+        layout.addView(status);
+
+        setContentView(layout);
+    }
+}

@@ -1,0 +1,33 @@
+package com.androidlab.client;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.view.Gravity;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.setGravity(Gravity.CENTER);
+        layout.setPadding(30, 30, 30, 30);
+
+        TextView title = new TextView(this);
+        title.setText("AndroidLab Client");
+        title.setTextSize(26);
+
+        TextView status = new TextView(this);
+        status.setText("\nConnection Status: Offline\n\nWaiting for Admin...");
+        status.setTextSize(18);
+
+        layout.addView(title);
+        layout.addView(status);
+
+        setContentView(layout);
+    }
+}
