@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AndroidLab Admin</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#e8edf8;font-family:Tahoma,Arial}
+header{padding:22px;background:#121a30;border-bottom:1px solid #26334e}
+h1{margin:0;color:#56a6ff;font-size:23px}
+main{padding:20px;max-width:950px;margin:auto}
+.card{background:#141e35;border:1px solid #293956;border-radius:14px;padding:20px;margin-bottom:18px}
+h2{font-size:17px;color:#65b3ff}
+.status{color:#ffc857}
+button{background:#2378df;color:white;border:0;padding:12px 20px;border-radius:8px;cursor:pointer}
+input{padding:12px;border-radius:8px;border:1px solid #354764;background:#0b1020;color:white;width:100%;margin:10px 0}
+footer{text-align:center;color:#75839e;padding:20px}
+</style>
+</head>
+<body>
+<header>
+<h1>AndroidLab</h1>
+<p>پنل مدیریت دستگاه‌ها</p>
+</header>
+<main>
+<div class="card">
+<h2>وضعیت سرور</h2>
+<p class="status">● رابط کاربری آماده است</p>
+<p>اتصال به API هنوز راه‌اندازی نشده است.</p>
+</div>
+<div class="card">
+<h2>اتصال دستگاه</h2>
+<input id="device" placeholder="شناسه دستگاه">
+<button onclick="alert('اتصال API در مرحله بعد راه‌اندازی می‌شود')">بررسی اتصال</button>
+</div>
+<div class="card">
+<h2>فایل‌های دریافتی</h2>
+<p>هنوز فایلی دریافت نشده است.</p>
+<p>فقط فایل‌هایی که کاربر دستگاه Client آگاهانه انتخاب و ارسال کند.</p>
+</div>
+</main>
+<footer>AndroidLab Project — 2026</footer>
+</body>
+</html>
